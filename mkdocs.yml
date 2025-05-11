@@ -30,6 +30,10 @@ theme:
 
 plugins:
   - search
+  - with-pdf
+
+extra_javascript:
+   - js/open_links.js
 
 markdown_extensions:
   - attr_list
