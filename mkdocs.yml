@@ -1,4 +1,4 @@
-site_name: How to install MySQl
+site_name: Advanced Database Labs
 theme:
   favicon: image/fmsi.png
   logo: image/fmsi.png
@@ -34,6 +34,9 @@ plugins:
 
 extra_javascript:
    - js/open_links.js
+
+extra_css:
+   - stylesheets/extra.css
 
 markdown_extensions:
   - attr_list

@@ -10,8 +10,8 @@ Welcome to the Advanced Database Lab course. This site provides hands-on labs to
 - Understanding **Timestamp Ordering**
 - Understanding Database recovery techniques (**ARIES**)
 - An introduction to **database security** practices:
-  - **Role-Based Access Control (RBAC)**
-  - **Data encryption**
+    - **Role-Based Access Control (RBAC)**
+    - **Data encryption**
 
 ##  Tutorial Support video
 
@@ -35,5 +35,4 @@ Each lab builds on the previous one. Please complete them in sequence:
 5. **Lab 4:** Database Security Measures
 
 ##  What You Should Do
-
-Each lab includes an **assignment** that you are expected to complete as part of the learning process. Please submit the assignments on time.
+!!! info "Each lab includes an **assignment** that you are expected to complete as part of the learning process.<span style="color: red;"> Please submit the assignments on time.</span>"
