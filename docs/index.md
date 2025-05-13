@@ -4,7 +4,7 @@ Welcome to the Advanced Database Lab course. This site provides hands-on labs to
 
 ##  What You Will Learn
 
-- How to install and use **MySQL**, **Python**, **SQLite**, and **Visual Studio Code**
+- How to install and use **MySQL**, **Python**, and **Visual Studio Code**
 - An understanding of **transaction management** and **SQL implementation**
 - Understanding concurrency control mechanisms (**2PL**, **Timestamp ordering**)
 - Understanding Database recovery techniques (**ARIES**)

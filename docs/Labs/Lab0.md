@@ -76,3 +76,82 @@ MySQL is an open-source relational database management system (RDBMS) that uses 
     ![MySQL installer](images/install-mysql-8.png){width="400"}
     </figure>
 10. Proceed through the installation wizard untill finish
+
+
+### What after install MySQL?
+
+
+1. After installing MySQL, connect to the **MySQL Server**. by clicking the `+` symbol next to MySQL Connections
+    <figure markdown="span">
+    ![MySQL](images/Connect_1.png){width="400"}
+    </figure>
+2. In the dialog box, enter a **Connection name**, e.g.,`Local`
+    <figure markdown="span">
+    ![MySQL](images/Connect_2.png){width="400"}
+    </figure>
+3. Click **Test Connection** and enter your MySQL root password to verify the connection
+    <figure markdown="span">
+    ![MySQL](images/Connect_3.png){width="400"}
+    </figure>
+4. After successfully connecting to the MySQL server, create a new database called `StudentDB`:
+    * Open `local` connection
+    * Click **Create new SQL** from the top-left corner
+    * Write SQL commands to create the `StudentDB` database, a `Students` table, and insert sample data.
+    * Execute the Script using Execute button ⚡
+    <figure markdown="span">
+    ![MySQL](images/Connect_4.png){width="400"}
+    </figure>
+    !!! info "Once you create the database, you will see it listed under the Schemas section on the left panel"
+5. Now you can run SQL queries on your new database
+    <figure markdown="span">
+    ![MySQL](images/Connect_5.png){width="400"}
+    </figure>
+#### What do we mean by Connection and Port?
+
+A database connection is a communication link between a client application (e.g., MySQL Workbench) and the MySQL server. When an application (the client) needs to perform operations such as creating databases, running queries, or retrieving data, it establishes a connection to communicate with the server.
+The port is a communication endpoint on your machine. By default, MySQL uses port `3306` to listen for incoming client requests.
+In short, a connection is essential to allow your client tools or applications to interact with the MySQL server, run queries, manage data, and exchange information.
+
+
+## Python programming language
+
+We will use the **Python programming language** to simulate the following:
+    * Concurrency control algorithms
+    * Database recovery techniques
+
+### Download and Install Python
+
+1. Go to the **[Python](https://www.python.org/downloads/)** official website
+2. Download the latest stable version
+3. Open the installer and check 
+    * Add Python to PATH
+
+
+### Download and Install VS Code 
+
+1. Visit the website **[VS code](https://code.visualstudio.com/Download)** Click on `Windows` to download VS code for Windows, as shown below<br>
+    <figure markdown="span">
+    ![Windows Setting](images/VScode-1.png){ width="400" }
+    </figure>
+2. After the download finished open the `VSCodeUserSetup` executable file, when it open select `I accept the agreement` then click on `Next`<br>
+    <figure markdown="span">
+    ![Windows Setting](images/VScode-2.png){ width="400" }
+    </figure>
+3.	Select all the option as seen below<br>
+    <figure markdown="span">
+    ![Windows Setting](images/VScode-3.png){ width="400" }
+    </figure>
+4.	Finally we are ready to install the VS code, click on `install` and wait untail the setup finish
+5.	On the Vs code, on the left-hand side, click on `extension` then in the search bar, write `Python` select `Python microsoft` and click on `Install` as shown below<br>
+    <figure markdown="span">
+    ![Python extention](images/python-3.png){ width="400" }
+    </figure>
+
+# Use online tool
+
+## Online Postgred server
+
+## Online Python Editor 
+
+
+# Assignment

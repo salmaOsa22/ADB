@@ -1,3 +1,9 @@
+nav:
+  - Home: index.md
+  - Labs:
+      - Lab 0: labs/lab0.md
+      - Lab 1: labs/lab1.md
+      - Lab 2: labs/lab2.md
 site_name: Advanced Database Labs
 theme:
   favicon: image/fmsi.png
@@ -30,7 +36,9 @@ theme:
 
 plugins:
   - search
-  - with-pdf
+  - with-pdf:
+      output_path: pdf/{path}.pdf
+
 
 extra_javascript:
    - js/open_links.js

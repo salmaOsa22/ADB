@@ -11,19 +11,19 @@
       
       
       
-      <link rel="icon" href="/image/fmsi.png">
+      <link rel="icon" href="../../image/fmsi.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Advanced Database Labs</title>
+        <title>Setup environment - Advanced Database Labs</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#setup-environment" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,9 +84,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Advanced Database Labs" class="md-header__button md-logo" aria-label="Advanced Database Labs" data-md-component="logo">
+    <a href="../.." title="Advanced Database Labs" class="md-header__button md-logo" aria-label="Advanced Database Labs" data-md-component="logo">
       
-  <img src="/image/fmsi.png" alt="logo">
+  <img src="../../image/fmsi.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -98,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Setup environment
             
           </span>
         </div>
@@ -199,7 +204,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -220,7 +225,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/labs/lab0.md" class="md-tabs__link">
+        <a href="../../labs/lab0.md" class="md-tabs__link">
           
   
   
@@ -256,9 +261,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Advanced Database Labs" class="md-nav__button md-logo" aria-label="Advanced Database Labs" data-md-component="logo">
+    <a href="../.." title="Advanced Database Labs" class="md-nav__button md-logo" aria-label="Advanced Database Labs" data-md-component="logo">
       
-  <img src="/image/fmsi.png" alt="logo">
+  <img src="../../image/fmsi.png" alt="logo">
 
     </a>
     Advanced Database Labs
@@ -273,7 +278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -338,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/labs/lab0.md" class="md-nav__link">
+      <a href="../../labs/lab0.md" class="md-nav__link">
         
   
   
@@ -361,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/labs/lab1.md" class="md-nav__link">
+      <a href="../../labs/lab1.md" class="md-nav__link">
         
   
   
@@ -384,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/labs/lab2.md" class="md-nav__link">
+      <a href="../../labs/lab2.md" class="md-nav__link">
         
   
   
@@ -419,8 +424,166 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="setup-environment">Setup environment</h1>
+<p><strong>Objective:</strong></p>
+<ul>
+<li>To Setup <strong>MySQL Database Management System</strong></li>
+<li>To Setup <strong>Python Programming Langauge</strong></li>
+<li>To Connect Python with <strong>SQLite</strong></li>
+</ul>
+<p><strong>Software:</strong></p>
+<ul>
+<li>MySQL installer (offline version)</li>
+<li>Visual Studio code (VS code)</li>
+</ul>
+<h2 id="prerequisites-install-microsoft-visual-c-2019-redistributable">Prerequisites: Install Microsoft Visual C++ 2019 Redistributable</h2>
+<p><span style="color: red;"> If you already have Microsoft Visual C++ 2019 Redistributable installed, you can skip this step and continue with the lab</span></p>
+<ol>
+<li>Go to the official Microsoft page
+<a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist view=msvc-170#visual-studio-2015-2017-2019-and-2022">Download VC++ Redistributables</a></li>
+<li>Download the file based on your system:<ul>
+<li>for 64-bit <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">VC_redist.x64.exe</a></li>
+<li>for 32-bit <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">VC_redist.x86.exe</a></li>
+</ul>
+</li>
+<li>Open the downloaded file and check on <strong>I agree to the license terms and conditions</strong>
+    <figure markdown="span">
+    <img alt="Install VC" src="../images/visual_c%2B%2B_install.png" width="400" />
+    </figure></li>
+<li>After installation, <strong>restart your PC</strong>.
+    <figure markdown="span">
+    <img alt="Restart PC" src="../images/visual_c%2B%2B_restart.png" width="400" />
+    </figure></li>
+</ol>
+<h2 id="mysql">MySQL</h2>
+<p>MySQL is an open-source relational database management system (RDBMS) that uses SQL to create, manage, and query data.</p>
+<h3 id="why-we-will-use-mysql">Why we will use MySQL?</h3>
+<ol>
+<li>Support <strong>ACID transaction properites</strong>, essential for understanding transaction management</li>
+<li>Uses the <strong>InnoDB</strong> transactional storage engine, which supports <strong>concurrency control</strong> and <strong>recovery mechanisms</strong></li>
+<li>Flexible and easy-to-use</li>
+</ol>
+<h3 id="installing-mysql-offline">Installing MySQL (Offline)</h3>
+<ol>
+<li>Go to the official <a href="https://dev.mysql.com/downloads/installer/">MySQL Downloads Page</a></li>
+<li>Download the <strong>Windows (x86, 32-bit), MSI Installer</strong> (Offline version ~353.7M)
+    <figure markdown="span">
+    <img alt="MySQL installer" src="../images/MySQL_installer.png" width="400" />
+    </figure></li>
+<li>After open the Installer Choose <strong>Custom</strong>
+    <figure markdown="span">
+    <img alt="MySQL installer" src="../images/install-mysql-1.png" width="400" />
+    </figure></li>
+<li>Select <strong>MySQL Servers</strong> and <strong>MySQL Workbench</strong>
+    <figure markdown="span">
+    <img alt="MySQL installer" src="../images/install-mysql-2.png" width="400" />
+    </figure></li>
+<li>Proceed through the installation wizard</li>
+<li>Use the default port (3306)
+    <figure markdown="span">
+    <img alt="MySQL installer" src="../images/install-mysql-5.png" width="400" />
+    </figure></li>
+<li>Choose the Authentication Method as below
+    <figure markdown="span">
+    <img alt="MySQL installer" src="../images/install-mysql-6.png" width="400" />
+    </figure></li>
+<li>Create a root password</li>
+<li>Choose Windows Service as below
+    <figure markdown="span">
+    <img alt="MySQL installer" src="../images/install-mysql-8.png" width="400" />
+    </figure></li>
+<li>Proceed through the installation wizard untill finish</li>
+</ol>
+<h3 id="what-after-install-mysql">What after install MySQL?</h3>
+<ol>
+<li>After installing MySQL, connect to the <strong>MySQL Server</strong>. by clicking the <code>+</code> symbol next to MySQL Connections
+    <figure markdown="span">
+    <img alt="MySQL" src="../images/Connect_1.png" width="400" />
+    </figure></li>
+<li>In the dialog box, enter a <strong>Connection name</strong>, e.g.,<code>Local</code>
+    <figure markdown="span">
+    <img alt="MySQL" src="../images/Connect_2.png" width="400" />
+    </figure></li>
+<li>Click <strong>Test Connection</strong> and enter your MySQL root password to verify the connection
+    <figure markdown="span">
+    <img alt="MySQL" src="../images/Connect_3.png" width="400" />
+    </figure></li>
+<li>After successfully connecting to the MySQL server, create a new database called <code>StudentDB</code>:<ul>
+<li>Open <code>local</code> connection</li>
+<li>Click <strong>Create new SQL</strong> from the top-left corner</li>
+<li>Write SQL commands to create the <code>StudentDB</code> database, a <code>Students</code> table, and insert sample data.</li>
+<li>Execute the Script using Execute button ⚡
+<figure markdown="span">
+<img alt="MySQL" src="../images/Connect_4.png" width="400" />
+</figure></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Once you create the database, you will see it listed under the Schemas section on the left panel</p>
+</div>
+</li>
+<li>Now you can run SQL queries on your new database
+    <figure markdown="span">
+    <img alt="MySQL" src="../images/Connect_5.png" width="400" />
+    </figure></li>
+</ol>
+<h4 id="what-do-we-mean-by-connection-and-port">What do we mean by Connection and Port?</h4>
+<p>A database connection is a communication link between a client application (e.g., MySQL Workbench) and the MySQL server. When an application (the client) needs to perform operations such as creating databases, running queries, or retrieving data, it establishes a connection to communicate with the server.
+The port is a communication endpoint on your machine. By default, MySQL uses port <code>3306</code> to listen for incoming client requests.
+In short, a connection is essential to allow your client tools or applications to interact with the MySQL server, run queries, manage data, and exchange information.</p>
+<h2 id="python-programming-language">Python programming language</h2>
+<p>We will use the <strong>Python programming language</strong> to simulate the following:
+    * Concurrency control algorithms
+    * Database recovery techniques</p>
+<h3 id="download-and-install-python">Download and Install Python</h3>
+<ol>
+<li>Go to the <strong><a href="https://www.python.org/downloads/">Python</a></strong> official website</li>
+<li>Download the latest stable version</li>
+<li>Open the installer and check <ul>
+<li>Add Python to PATH</li>
+</ul>
+</li>
+</ol>
+<h3 id="download-and-install-vs-code">Download and Install VS Code</h3>
+<ol>
+<li>Visit the website <strong><a href="https://code.visualstudio.com/Download">VS code</a></strong> Click on <code>Windows</code> to download VS code for Windows, as shown below<br>
+    <figure markdown="span">
+    <img alt="Windows Setting" src="../images/VScode-1.png" width="400" />
+    </figure></li>
+<li>After the download finished open the <code>VSCodeUserSetup</code> executable file, when it open select <code>I accept the agreement</code> then click on <code>Next</code><br>
+    <figure markdown="span">
+    <img alt="Windows Setting" src="../images/VScode-2.png" width="400" />
+    </figure></li>
+<li>Select all the option as seen below<br>
+    <figure markdown="span">
+    <img alt="Windows Setting" src="../images/VScode-3.png" width="400" />
+    </figure></li>
+<li>Finally we are ready to install the VS code, click on <code>install</code> and wait untail the setup finish</li>
+<li>On the Vs code, on the left-hand side, click on <code>extension</code> then in the search bar, write <code>Python</code> select <code>Python microsoft</code> and click on <code>Install</code> as shown below<br>
+    <figure markdown="span">
+    <img alt="Python extention" src="../images/python-3.png" width="400" />
+    </figure></li>
+</ol>
+<h1 id="use-online-tool">Use online tool</h1>
+<h2 id="online-postgred-server">Online Postgred server</h2>
+<h2 id="online-python-editor">Online Python Editor</h2>
+<h1 id="assignment">Assignment</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -470,12 +633,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "/assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="/js/open_links.js"></script>
+        <script src="../../js/open_links.js"></script>
       
     
   </body>
