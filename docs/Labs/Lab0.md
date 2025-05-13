@@ -25,11 +25,11 @@
     * for 32-bit [VC_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 3. Open the downloaded file and check on **I agree to the license terms and conditions**
     <figure markdown="span">
-    ![Install VC](/image/visual_c++_install.png){width="400"}
+    ![Install VC](images/visual_c++_install.png){width="400"}
     </figure>
 4.  After installation, **restart your PC**.
     <figure markdown="span">
-    ![Restart PC](/image/visual_c++_restart.png){width="400"}
+    ![Restart PC](images/visual_c++_restart.png){width="400"}
     </figure>
 
 
@@ -51,28 +51,28 @@ MySQL is an open-source relational database management system (RDBMS) that uses 
 1. Go to the official [MySQL Downloads Page](https://dev.mysql.com/downloads/installer/)
 2. Download the **Windows (x86, 32-bit), MSI Installer** (Offline version ~353.7M)
     <figure markdown="span">
-    ![MySQL installer](/image/MySQL_installer.png){width="400"}
+    ![MySQL installer](images/MySQL_installer.png){width="400"}
     </figure>
 3. After open the Installer Choose **Custom**
     <figure markdown="span">
-    ![MySQL installer](/image/install-mysql-1.png){width="400"}
+    ![MySQL installer](images/install-mysql-1.png){width="400"}
     </figure>
 4. Select **MySQL Servers** and **MySQL Workbench**
     <figure markdown="span">
-    ![MySQL installer](/image/install-mysql-2.png){width="400"}
+    ![MySQL installer](images/install-mysql-2.png){width="400"}
     </figure>
 5. Proceed through the installation wizard
 6. Use the default port (3306)
     <figure markdown="span">
-    ![MySQL installer](/image/install-mysql-5.png){width="400"}
+    ![MySQL installer](images/install-mysql-5.png){width="400"}
     </figure>
 7. Choose the Authentication Method as below
     <figure markdown="span">
-    ![MySQL installer](/image/install-mysql-6.png){width="400"}
+    ![MySQL installer](images/install-mysql-6.png){width="400"}
     </figure>
 8. Create a root password
 9. Choose Windows Service as below
     <figure markdown="span">
-    ![MySQL installer](/image/install-mysql-8.png){width="400"}
+    ![MySQL installer](images/install-mysql-8.png){width="400"}
     </figure>
 10. Proceed through the installation wizard untill finish
