@@ -6,4 +6,11 @@ body, .md-typeset {
   /* Apply a nice monospaced font for code blocks */
   code, pre {
     font-family: "Fira Code", "Courier New", monospace;
-  }  
+  }
+
+  .img-left {
+    float: left;
+    margin-right: 20px;
+    width: 400px;
+  }
+  

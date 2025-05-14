@@ -6,8 +6,14 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="A collection of lab assignments for the ADB 2025 course.">
       
       
+        <meta name="author" content="Amira Nasreldeein, Aseel, Salma">
+      
+      
+      
+        <link rel="prev" href="../general_instructions/">
       
       
       
@@ -16,7 +22,7 @@
     
     
       
-        <title>Setup environment - Advanced Database Labs</title>
+        <title>Lab0 - Advanced Database Labs</title>
       
     
     
@@ -51,7 +57,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -103,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setup environment
+              Lab0
             
           </span>
         </div>
@@ -222,18 +237,38 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../labs/lab0.md" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../general_instructions/" class="md-tabs__link">
+        
   
   
-  Labs
+    
+  
+  General instructions
 
-        </a>
-      </li>
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
     
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Lab0
+
+      </a>
+    </li>
   
 
       
@@ -299,114 +334,213 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../general_instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    General instructions
     
+  </span>
+  
+
+      </a>
+    </li>
+  
+
     
+      
+      
+  
+  
     
-    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
   
   
   <span class="md-ellipsis">
-    Labs
+    Lab0
     
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Labs
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../labs/lab0.md" class="md-nav__link">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Lab 0
+    Lab0
     
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../labs/lab1.md" class="md-nav__link">
+      
         
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  <span class="md-ellipsis">
-    Lab 1
+  
     
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-install-microsoft-visual-c-2019-redistributable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites: Install Microsoft Visual C++ 2019 Redistributable
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      MySQL
+    </span>
+  </a>
   
-    <li class="md-nav__item">
-      <a href="../../labs/lab2.md" class="md-nav__link">
+    <nav class="md-nav" aria-label="MySQL">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#why-we-will-use-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why we will use MySQL?
+    </span>
+  </a>
   
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-mysql-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing MySQL (Offline)
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    Lab 2
-    
-  </span>
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-after-install-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      What after install MySQL?
+    </span>
+  </a>
   
-
-      </a>
-    </li>
+    <nav class="md-nav" aria-label="What after install MySQL?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-do-we-mean-by-connection-and-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do we mean by Connection and Port?
+    </span>
+  </a>
   
-
-              
-            
-          </ul>
-        </nav>
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-programming-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python programming language
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python programming language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-and-install-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download and Install Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-and-install-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download and Install VS Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alteranative-way-to-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alteranative way to practice:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment-install-mysql-create-a-database-and-query-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignment: Install MySQL, Create a Database, and Query It
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assignment: Install MySQL, Create a Database, and Query It">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-assign" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to assign:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -431,32 +565,32 @@
 <h1 id="setup-environment">Setup environment</h1>
 <p><strong>Objective:</strong></p>
 <ul>
-<li>To Setup <strong>MySQL Database Management System</strong></li>
-<li>To Setup <strong>Python Programming Langauge</strong></li>
-<li>To Connect Python with <strong>SQLite</strong></li>
+<li>To set up <strong>MySQL Database Management System</strong></li>
+<li>To connect to <strong>MySQL</strong> server</li>
+<li>To set up <strong>Python Programming Langauge</strong></li>
 </ul>
 <p><strong>Software:</strong></p>
 <ul>
 <li>MySQL installer (offline version)</li>
 <li>Visual Studio code (VS code)</li>
 </ul>
-<h2 id="prerequisites-install-microsoft-visual-c-2019-redistributable">Prerequisites: Install Microsoft Visual C++ 2019 Redistributable</h2>
-<p><span style="color: red;"> If you already have Microsoft Visual C++ 2019 Redistributable installed, you can skip this step and continue with the lab</span></p>
+<h2 id="prerequisites-install-microsoft-visual-c-2019-redistributable"><strong>Prerequisites:</strong> Install Microsoft Visual C++ 2019 Redistributable</h2>
+<p><span style="color: red;"> If you already have Microsoft Visual C++ 2019 Redistributable installed, you can skip this step and continue with the lab.</span></p>
 <ol>
-<li>Go to the official Microsoft page
+<li>Go to the official Microsoft page.
 <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist view=msvc-170#visual-studio-2015-2017-2019-and-2022">Download VC++ Redistributables</a></li>
 <li>Download the file based on your system:<ul>
 <li>for 64-bit <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">VC_redist.x64.exe</a></li>
 <li>for 32-bit <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">VC_redist.x86.exe</a></li>
 </ul>
 </li>
-<li>Open the downloaded file and check on <strong>I agree to the license terms and conditions</strong>
+<li>Open the downloaded file and check on <strong>I agree to the license terms and conditions</strong>.
     <figure markdown="span">
-    <img alt="Install VC" src="../images/visual_c%2B%2B_install.png" width="400" />
+    <a class="glightbox" href="../images/visual_c%2B%2B_install.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Install VC" src="../images/visual_c%2B%2B_install.png" width="400" /></a>
     </figure></li>
 <li>After installation, <strong>restart your PC</strong>.
     <figure markdown="span">
-    <img alt="Restart PC" src="../images/visual_c%2B%2B_restart.png" width="400" />
+    <a class="glightbox" href="../images/visual_c%2B%2B_restart.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Restart PC" src="../images/visual_c%2B%2B_restart.png" width="400" /></a>
     </figure></li>
 </ol>
 <h2 id="mysql">MySQL</h2>
@@ -472,29 +606,29 @@
 <li>Go to the official <a href="https://dev.mysql.com/downloads/installer/">MySQL Downloads Page</a></li>
 <li>Download the <strong>Windows (x86, 32-bit), MSI Installer</strong> (Offline version ~353.7M)
     <figure markdown="span">
-    <img alt="MySQL installer" src="../images/MySQL_installer.png" width="400" />
+    <a class="glightbox" href="../images/MySQL_installer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL installer" src="../images/MySQL_installer.png" width="400" /></a>
     </figure></li>
 <li>After open the Installer Choose <strong>Custom</strong>
     <figure markdown="span">
-    <img alt="MySQL installer" src="../images/install-mysql-1.png" width="400" />
+    <a class="glightbox" href="../images/install-mysql-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL installer" src="../images/install-mysql-1.png" width="400" /></a>
     </figure></li>
 <li>Select <strong>MySQL Servers</strong> and <strong>MySQL Workbench</strong>
     <figure markdown="span">
-    <img alt="MySQL installer" src="../images/install-mysql-2.png" width="400" />
+    <a class="glightbox" href="../images/install-mysql-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL installer" src="../images/install-mysql-2.png" width="400" /></a>
     </figure></li>
 <li>Proceed through the installation wizard</li>
 <li>Use the default port (3306)
     <figure markdown="span">
-    <img alt="MySQL installer" src="../images/install-mysql-5.png" width="400" />
+    <a class="glightbox" href="../images/install-mysql-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL installer" src="../images/install-mysql-5.png" width="400" /></a>
     </figure></li>
 <li>Choose the Authentication Method as below
     <figure markdown="span">
-    <img alt="MySQL installer" src="../images/install-mysql-6.png" width="400" />
+    <a class="glightbox" href="../images/install-mysql-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL installer" src="../images/install-mysql-6.png" width="400" /></a>
     </figure></li>
 <li>Create a root password</li>
 <li>Choose Windows Service as below
     <figure markdown="span">
-    <img alt="MySQL installer" src="../images/install-mysql-8.png" width="400" />
+    <a class="glightbox" href="../images/install-mysql-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL installer" src="../images/install-mysql-8.png" width="400" /></a>
     </figure></li>
 <li>Proceed through the installation wizard untill finish</li>
 </ol>
@@ -502,15 +636,15 @@
 <ol>
 <li>After installing MySQL, connect to the <strong>MySQL Server</strong>. by clicking the <code>+</code> symbol next to MySQL Connections
     <figure markdown="span">
-    <img alt="MySQL" src="../images/Connect_1.png" width="400" />
+    <a class="glightbox" href="../images/Connect_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL" src="../images/Connect_1.png" width="400" /></a>
     </figure></li>
 <li>In the dialog box, enter a <strong>Connection name</strong>, e.g.,<code>Local</code>
     <figure markdown="span">
-    <img alt="MySQL" src="../images/Connect_2.png" width="400" />
+    <a class="glightbox" href="../images/Connect_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL" src="../images/Connect_2.png" width="400" /></a>
     </figure></li>
 <li>Click <strong>Test Connection</strong> and enter your MySQL root password to verify the connection
     <figure markdown="span">
-    <img alt="MySQL" src="../images/Connect_3.png" width="400" />
+    <a class="glightbox" href="../images/Connect_3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL" src="../images/Connect_3.png" width="400" /></a>
     </figure></li>
 <li>After successfully connecting to the MySQL server, create a new database called <code>StudentDB</code>:<ul>
 <li>Open <code>local</code> connection</li>
@@ -518,8 +652,33 @@
 <li>Write SQL commands to create the <code>StudentDB</code> database, a <code>Students</code> table, and insert sample data.</li>
 <li>Execute the Script using Execute button ⚡
 <figure markdown="span">
-<img alt="MySQL" src="../images/Connect_4.png" width="400" />
-</figure></li>
+<a class="glightbox" href="../images/Connect_4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL" src="../images/Connect_4.png" width="400" /></a>
+</figure>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/*</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm">Name: Amira Naser Aldeein</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cm">Index: 01x-xxx</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cm">Department: e.g., CS</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cm">*/</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">StudentDB</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">USE</span><span class="w"> </span><span class="n">StudentDB</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Students</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">StudentID</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="n">FullName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">Gender</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="n">BirthDate</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="n">Department</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="n">GPA</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="n">CreatedAt</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">);</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1">-- Sample data</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Students</span><span class="w"> </span><span class="p">(</span><span class="n">FullName</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="p">,</span><span class="w"> </span><span class="n">BirthDate</span><span class="p">,</span><span class="w"> </span><span class="n">Department</span><span class="p">,</span><span class="w"> </span><span class="n">GPA</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">(</span><span class="s1">&#39;Ali Ahmed&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2000-05-12&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Computer Science&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">.</span><span class="mi">45</span><span class="p">),</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">(</span><span class="s1">&#39;Sara Hassan&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2001-07-18&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Information Systems&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">.</span><span class="mi">78</span><span class="p">),</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">(</span><span class="s1">&#39;Omar Musa&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2002-03-25&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Mathematics&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">.</span><span class="mi">90</span><span class="p">);</span>
+</code></pre></div></li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Once you create the database, you will see it listed under the Schemas section on the left panel</p>
@@ -527,8 +686,11 @@
 </li>
 <li>Now you can run SQL queries on your new database
     <figure markdown="span">
-    <img alt="MySQL" src="../images/Connect_5.png" width="400" />
-    </figure></li>
+    <a class="glightbox" href="../images/Connect_5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MySQL" src="../images/Connect_5.png" width="400" /></a>
+    </figure>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">USE</span><span class="w"> </span><span class="n">StudentDB</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span><span class="p">;</span>
+</code></pre></div></li>
 </ol>
 <h4 id="what-do-we-mean-by-connection-and-port">What do we mean by Connection and Port?</h4>
 <p>A database connection is a communication link between a client application (e.g., MySQL Workbench) and the MySQL server. When an application (the client) needs to perform operations such as creating databases, running queries, or retrieving data, it establishes a connection to communicate with the server.
@@ -551,26 +713,49 @@ In short, a connection is essential to allow your client tools or applications t
 <ol>
 <li>Visit the website <strong><a href="https://code.visualstudio.com/Download">VS code</a></strong> Click on <code>Windows</code> to download VS code for Windows, as shown below<br>
     <figure markdown="span">
-    <img alt="Windows Setting" src="../images/VScode-1.png" width="400" />
+    <a class="glightbox" href="../images/VScode-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Windows Setting" src="../images/VScode-1.png" width="400" /></a>
     </figure></li>
 <li>After the download finished open the <code>VSCodeUserSetup</code> executable file, when it open select <code>I accept the agreement</code> then click on <code>Next</code><br>
     <figure markdown="span">
-    <img alt="Windows Setting" src="../images/VScode-2.png" width="400" />
+    <a class="glightbox" href="../images/VScode-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Windows Setting" src="../images/VScode-2.png" width="400" /></a>
     </figure></li>
 <li>Select all the option as seen below<br>
     <figure markdown="span">
-    <img alt="Windows Setting" src="../images/VScode-3.png" width="400" />
+    <a class="glightbox" href="../images/VScode-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Windows Setting" src="../images/VScode-3.png" width="400" /></a>
     </figure></li>
 <li>Finally we are ready to install the VS code, click on <code>install</code> and wait untail the setup finish</li>
 <li>On the Vs code, on the left-hand side, click on <code>extension</code> then in the search bar, write <code>Python</code> select <code>Python microsoft</code> and click on <code>Install</code> as shown below<br>
     <figure markdown="span">
-    <img alt="Python extention" src="../images/python-3.png" width="400" />
+    <a class="glightbox" href="../images/python-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Python extention" src="../images/python-3.png" width="400" /></a>
     </figure></li>
 </ol>
-<h1 id="use-online-tool">Use online tool</h1>
-<h2 id="online-postgred-server">Online Postgred server</h2>
-<h2 id="online-python-editor">Online Python Editor</h2>
-<h1 id="assignment">Assignment</h1>
+<h2 id="alteranative-way-to-practice">Alteranative way to practice:</h2>
+<div class="highlight"><pre><span></span><code>* Online Postgred server **[supabase](https://supabase.com/)**
+* Online Python Editer **[programiz](https://www.programiz.com/python-programming/online-compiler/)**
+</code></pre></div>
+<h2 id="assignment-install-mysql-create-a-database-and-query-it">Assignment: Install MySQL, Create a Database, and Query It</h2>
+<div class="admonition attention">
+<p class="admonition-title">Due Date on 24/5/2025</p>
+</div>
+<p><span style="color: red;"> See the requirement about the structures of the lab <strong><a href="../general_instructions/">here</a></strong></span></p>
+<ol>
+<li>Download and Install MySQL</li>
+<li>Connect to the server</li>
+<li>Create a New Database</li>
+<li>Create a Table</li>
+<li>Insert Data</li>
+<li>Query the Data
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">USE</span><span class="w"> </span><span class="n">DatabaseName</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">TableName</span><span class="p">;</span>
+</code></pre></div></li>
+</ol>
+<h3 id="what-to-assign">What to assign:</h3>
+<p>Take Screenshots:</p>
+<ol>
+<li>SQL code (on MySQL)</li>
+<li>The output of your query</li>
+<li>Put it all on one document</li>
+</ol>
 
 
 
@@ -608,9 +793,7 @@ In short, a connection is essential to allow your client tools or applications t
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2025 <a href="https://github.com/AmiraGamal1"  target="_blank" rel="noopener">Amira Nasreldeein</a>
-- <a href="#"  target="_blank" rel="noopener">Aseel</a>
-- <a href="#"  target="_blank" rel="noopener">Salma</a>
+      © 2025 Amira – Aseel – Salma
     </div>
   
   
@@ -641,5 +824,7 @@ In short, a connection is essential to allow your client tools or applications t
         <script src="../../js/open_links.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

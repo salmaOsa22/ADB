@@ -1,10 +1,11 @@
 nav:
   - Home: index.md
-  - Labs:
-      - Lab 0: labs/lab0.md
-      - Lab 1: labs/lab1.md
-      - Lab 2: labs/lab2.md
+  - General instructions: Labs/general_instructions.md
+  - Lab0: Labs/Lab0.md
+
 site_name: Advanced Database Labs
+site_author: "Amira Nasreldeein, Aseel, Salma"
+site_description: "A collection of lab assignments for the ADB 2025 course."
 theme:
   favicon: image/fmsi.png
   logo: image/fmsi.png
@@ -36,9 +37,11 @@ theme:
 
 plugins:
   - search
+  - glightbox
   - with-pdf:
-      output_path: pdf/{path}.pdf
-
+      output_path: pdf/document.pdf
+      enabled_if_env: ENABLE_PDF_EXPORT
+      cover_subtitle: "ADB Labs"
 
 extra_javascript:
    - js/open_links.js
@@ -47,6 +50,7 @@ extra_css:
    - stylesheets/extra.css
 
 markdown_extensions:
+  - pymdownx.blocks.caption
   - attr_list
   - md_in_html
   - pymdownx.highlight:
@@ -65,7 +69,5 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-copyright: |
-  &copy; 2025 <a href="https://github.com/AmiraGamal1"  target="_blank" rel="noopener">Amira Nasreldeein</a>
-  - <a href="#"  target="_blank" rel="noopener">Aseel</a>
-  - <a href="#"  target="_blank" rel="noopener">Salma</a>
+copyright:
+  © 2025 Amira – Aseel – Salma
