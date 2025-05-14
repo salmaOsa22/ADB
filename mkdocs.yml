@@ -37,7 +37,6 @@ theme:
 
 plugins:
   - search
-  - glightbox
   - with-pdf:
       output_path: pdf/document.pdf
       enabled_if_env: ENABLE_PDF_EXPORT
