@@ -18,7 +18,7 @@
 
 
 1. Go to the official Microsoft page.
-[Download VC++ Redistributables](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist view=msvc-170#visual-studio-2015-2017-2019-and-2022)
+[Download VC++ Redistributables](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)
 2. Download the file based on your system:
     * for 64-bit [VC_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
     * for 32-bit [VC_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
