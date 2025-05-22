@@ -131,6 +131,7 @@ In an online electronics store:
 
 *   Read page 752 on the primary book (FUNDAMENTALS OF Database Systems)
 *   <span style="color: red;">See the requirement about the structures of the lab [here](general_instructions.md)</span>
+*   You can use any SQL editor (Online or Local), but be cautious — **transaction statements may vary slightly between different DBMSs**, and the use of `DO SLEEP` depends on the specific database engine. For example, `DO SLEEP()` is supported in MySQL 8.0.29+, while in other systems or older versions, you may need to use `SELECT SLEEP()` or an alternative approach.
 
 ### What to assign: 
 
