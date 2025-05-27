@@ -131,7 +131,7 @@ When you use aggregate functions (like `SUM`, `AVG`, and `COUNT`) on a table whi
 
 ---
 
-### 📂 Step 1: Create the Table
+###  Step 1: Create the Table
 
 ```sql
 CREATE TABLE accounts (
@@ -142,7 +142,7 @@ CREATE TABLE accounts (
 
 ---
 
-### 📂 Step 2: Insert Initial Data
+###  Step 2: Insert Initial Data
 
 ```sql
 INSERT INTO accounts (id, balance) VALUES
@@ -153,9 +153,9 @@ INSERT INTO accounts (id, balance) VALUES
 
 ---
 
-### ⏱️ Step 3: Simulate Concurrent Transactions
+###  Step 3: Simulate Concurrent Transactions
 
-#### 🌐 Transaction T1 (Session 1)
+####  Transaction T1 (Session 1)
 
 ```sql
 BEGIN;
@@ -163,7 +163,7 @@ UPDATE accounts SET balance = balance + 100 WHERE id = 1;
 -- Not committed yet
 ```
 
-#### 📲 Transaction T2 (Session 2)
+####  Transaction T2 (Session 2)
 
 ```sql
 SELECT SUM(balance) FROM accounts;
@@ -177,9 +177,9 @@ SUM(balance) = 2450.00
 
 ---
 
-### 📊 Step 4: Add COMMIT to T1 and Re-run
+###  Step 4: Add COMMIT to T1 and Re-run
 
-#### 🌐 Transaction T1 (Session 1)
+####  Transaction T1 (Session 1)
 
 ```sql
 BEGIN;
@@ -187,7 +187,7 @@ UPDATE accounts SET balance = balance + 100 WHERE id = 1;
 COMMIT;
 ```
 
-#### 📲 Transaction T2 (Session 2)
+####  Transaction T2 (Session 2)
 
 ```sql
 SELECT SUM(balance) FROM accounts;
