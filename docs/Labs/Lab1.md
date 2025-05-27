@@ -17,12 +17,87 @@
 3. Implicit transactions: A new transaction is implicitly started when the prior transaction completes, but each transaction is explicitly completed with a `COMMIT` or `ROLLBACK` statement.
 
 ### SQL statement for transaction control
+## ✅ Transaction Control Commands: BEGIN, SAVEPOINT, ROLLBACK, COMMIT
+
+###  BEGIN
+
+In some databases (like MySQL and PostgreSQL), you explicitly start a transaction using:
+
+```sql
+BEGIN;
+-- or
+START TRANSACTION;
+```
+
+---
+
+###  SAVEPOINT
+
+`SAVEPOINT` sets a point within a transaction that you can later roll back to.
+
+####  Example:
+
+```sql
+BEGIN;
+
+INSERT INTO employees (id, name, department) VALUES (1, 'Alice', 'HR');
+SAVEPOINT sp1;
+
+INSERT INTO employees (id, name, department) VALUES (2, 'Bob', 'Finance');
+SAVEPOINT sp2;
+
+INSERT INTO employees (id, name, department) VALUES (3, 'Charlie', 'IT');
+```
+
+> Now we have added 3 employees and created two savepoints: `sp1` and `sp2`.
+
+---
+
+###  ROLLBACK
+
+`ROLLBACK` undoes changes. You can roll back to a specific savepoint or the entire transaction.
+
+####  Example: Rollback to Savepoint
+
+```sql
+ROLLBACK TO sp2;
+```
+
+> This undoes only the insertion of **Charlie**, but keeps **Alice** and **Bob**.
+
+####  Example: Rollback Entire Transaction
+
+```sql
+ROLLBACK;
+```
+
+> This undoes **all** changes made in the transaction.
+
+---
+
+###  COMMIT
+
+`COMMIT` saves all changes permanently in the database.
+
+####  Example:
+
+```sql
+COMMIT;
+```
+
+> After this command, changes are permanent and cannot be rolled back.
+
+---
+
+Use these commands to manage complex operations and ensure data integrity in multi-step SQL transactions.
+
+---
 
 ### Transaction properties and how SQL supports them
 
 **Transaction properties (ACID):**
 
-1. **A - Atomicity:** All actions in transaction happen, or none happen. “*All or nothing…*”
+1. **A - Atomicity:** All actions in a transaction happen, or none happen. “*All or nothing…*”
 2. **C - Consistency:** If each transaction is consistent and the database starts in a consistent state, it ends in a consistent state. “*It looks correct to me…*”
 3. **I - Isolation:** Execution of one transaction is isolated from other transactions. “*All by myself…*”
 4. **D - Durability:** Once a transaction commits, its effects are permanent. “*I will survive…*”
