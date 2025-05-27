@@ -124,7 +124,91 @@ In an online electronics store:
     </figure>
 7. Conclusion: Session 2 was able to see the updated quantity (0 laptops) before Session 1 rolled back. This leads to inconsistent or misleading data, which is why isolation levels like `READ COMMITTED or REPEATABLE READ are important in real-world applications.
 
-#### 3. The Incorrect Summary Problem
+#### 3. The Incorrect Summary Problem 
+### 🔢 Problem Statement
+
+When you use aggregate functions (like `SUM`, `AVG`, and `COUNT`) on a table while other transactions update the data, your query might return **inconsistent results**. This happens because some rows may be updated **before** the function reads them and others **after**.
+
+---
+
+### 📂 Step 1: Create the Table
+
+```sql
+CREATE TABLE accounts (
+    id INT PRIMARY KEY,
+    balance DECIMAL(10,2)
+);
+```
+
+---
+
+### 📂 Step 2: Insert Initial Data
+
+```sql
+INSERT INTO accounts (id, balance) VALUES
+(1, 500.00),
+(2, 750.00),
+(3, 1200.00);
+```
+
+---
+
+### ⏱️ Step 3: Simulate Concurrent Transactions
+
+#### 🌐 Transaction T1 (Session 1)
+
+```sql
+BEGIN;
+UPDATE accounts SET balance = balance + 100 WHERE id = 1;
+-- Not committed yet
+```
+
+#### 📲 Transaction T2 (Session 2)
+
+```sql
+SELECT SUM(balance) FROM accounts;
+```
+
+> ⚠️ At this point, `SUM()` still uses the **old value** of id = 1 because the update in T1 hasn't been committed. The total sum is:
+
+```text
+SUM(balance) = 2450.00
+```
+
+---
+
+### 📊 Step 4: Add COMMIT to T1 and Re-run
+
+#### 🌐 Transaction T1 (Session 1)
+
+```sql
+BEGIN;
+UPDATE accounts SET balance = balance + 100 WHERE id = 1;
+COMMIT;
+```
+
+#### 📲 Transaction T2 (Session 2)
+
+```sql
+SELECT SUM(balance) FROM accounts;
+```
+
+> ✅ Now that the update has been committed in T1, `SUM()` reflects the **new value**. The total sum becomes:
+
+```text
+SUM(balance) = 2550.00
+```
+
+---
+
+### 📈 Summary
+
+* Without `COMMIT`, other sessions won't see changes.
+* With `COMMIT`, all sessions get consistent, updated results.
+
+Use transactions carefully when performing aggregation queries!
+
+
 
 ## Assignment: Simulate The Unrepeatable Read Problem
 !!! attention "Due Date on 14/6/2025"
