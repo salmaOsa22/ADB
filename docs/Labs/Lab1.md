@@ -44,6 +44,20 @@ Several problems can occur when concurrent transactions execute ^^without proper
 **Here is an illustrated problem with SQL transactions to simulate the problem:**
 
 #### 1. Lost update problem
+## Lost Update Problem
+
+This problem occurs when two or more transactions read and update the same data item concurrently without being aware of each other's changes. As a result, the last update overwrites the previous ones, leading to the loss of some updates and causing data inconsistency.
+
+### 💡 Real-World Scenario
+
+Two users (sessions) try to withdraw money from the same account at the same time:
+
+- **User A** reads the balance = 100, decides to withdraw 30 → wants to update it to 70.
+- **User B** also reads the balance = 100, decides to withdraw 50 → wants to update it to 50.
+- If both updates happen without proper control, one will overwrite the other.
+
+⚠️ This leads to lost updates and incorrect final balance.
+
 
 #### 2. The Temporary Update (or Dirty Read) Problem
 
