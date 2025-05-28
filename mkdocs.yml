@@ -2,6 +2,8 @@ nav:
   - Home: index.md
   - General instructions: Labs/general_instructions.md
   - Lab0: Labs/Lab0.md
+  - Lab 1: labs/Lab1.md
+
 
 site_name: Advanced Database Labs
 site_author: "Amira Nasreldeein, Aseel, Salma"
