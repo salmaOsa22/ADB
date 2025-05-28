@@ -48,7 +48,7 @@ Several problems can occur when concurrent transactions execute ^^without proper
 
 This problem occurs when two or more transactions read and update the same data item concurrently without being aware of each other's changes. As a result, the last update overwrites the previous ones, leading to the loss of some updates and causing data inconsistency.
 
-### 💡 Real-World Scenario
+###  Real-World Scenario
 
 Two users (sessions) try to withdraw money from the same account at the same time:
 
@@ -57,6 +57,83 @@ Two users (sessions) try to withdraw money from the same account at the same tim
 - If both updates happen without proper control, one will overwrite the other.
 
 ⚠️ This leads to lost updates and incorrect final balance.
+
+### Example of the Scenario in SQL:
+
+To simulate a Lost Update in MySQL using two concurrent sessions:
+
+#### 1) Create a Table:
+Create a table named `accounts` and insert sample data into it:
+
+```sql
+
+CREATE TABLE accounts (
+    id SERIAL PRIMARY KEY,
+    name TEXT,
+    balance NUMERIC(10,2)
+);
+
+
+
+INSERT INTO accounts (name, balance) VALUES ('Ali', 100.00);
+
+```
+
+![Lost Update Example](images/lost update 1.png){ width="400" }
+
+#### 2) Session A (user A):
+
+```SQL
+
+START TRANSACTION;
+SELECT balance FROM accounts WHERE id = 1;
+UPDATE accounts SET balance = 70 WHERE id = 1;
+
+```
+
+![Lost Update Example](images/lost update 2.png){ width="400" }
+
+Here, user A reads the balance (100) and calculates the new balance: 100 - 30 = 70, then updates the record without commit. 
+
+#### 3) Session B (user B, in another window):
+
+```SQL
+
+START TRANSACTION;
+SELECT balance FROM accounts WHERE id = 1;
+UPDATE accounts SET balance = 50 WHERE id = 1;
+COMMIT;
+
+```
+
+![Lost Update Example](images/lost update 3.png){ width="400" }
+
+Here, user B reads the balance (100) and calculates the new balance: 100 - 50 = 50, then  updates the record and commit. 
+⚠️ ( Note:  to open two sessions in MySQL Workbench; Go to File → New Query Tab to open Session A, Repeat to open another tab (Session B). Each tab is a separate session — you can run SQL commands independently in each).
+
+#### 4) Back to session A:
+
+Now return back to session A again and commit the session:
+ 
+ ![Lost Update Example](images/lost update 4.png){ width="400" }
+
+#### 5) Check the final balance:
+
+```SQL
+
+SELECT * FROM accounts;
+
+``` 
+ ![Lost Update Example](images/lost update 5.png){ width="400" }
+
+ Here we will see the balance becomes 70, and user B’s update (which should make the balance 50) is lost.
+
+
+#### Conclusion:
+•	Both transactions read the same initial value (100).
+•	Each transaction updates the data without being aware of the other's changes.
+•	The last transaction to commit determines the final value, possibly erasing the other's update.
+•	Even though no errors appear, data integrity is lost. This demonstrates the importance of proper concurrency control in database systems.
 
 
 #### 2. The Temporary Update (or Dirty Read) Problem
