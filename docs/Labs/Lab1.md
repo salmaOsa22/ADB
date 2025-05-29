@@ -61,7 +61,7 @@ Two users (sessions) try to withdraw money from the same account at the same tim
 To simulate a Lost Update in MySQL using two concurrent sessions:
 
 #### 1) Create a Table:
-Create a table named `accounts` and insert sample data into it:
+Create any Database and create a table named `accounts` and insert sample data into it:
 
 ```sql
 
