@@ -53,9 +53,8 @@ Two users (sessions) try to withdraw money from the same account at the same tim
 
 - **User A** reads the balance = 100, decides to withdraw 30 → wants to update it to 70.
 - **User B** also reads the balance = 100, decides to withdraw 50 → wants to update it to 50.
-- If both updates happen without proper control, one will overwrite the other.
+- If both updates happen without proper control, one will overwrite the other, leads to lost updates and incorrect final balance.
 
-⚠️ This leads to lost updates and incorrect final balance.
 
 ### Example of the Scenario in SQL:
 
@@ -130,10 +129,10 @@ SELECT * FROM accounts;
 
 
 #### Conclusion:
-•	Both transactions read the same initial value (100).
-•	Each transaction updates the data without being aware of the other's changes.
-•	The last transaction to commit determines the final value, possibly erasing the other's update.
-•	Even though no errors appear, data integrity is lost. This demonstrates the importance of proper concurrency control in database systems.
+-	Both transactions read the same initial value (100).
+-	Each transaction updates the data without being aware of the other's changes.
+-	The last transaction to commit determines the final value, possibly erasing the other's update.
+-	Even though no errors appear, data integrity is lost. This demonstrates the importance of proper concurrency control in database systems.
 
 
 #### 2. The Temporary Update (or Dirty Read) Problem
