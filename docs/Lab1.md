@@ -48,7 +48,7 @@ Several problems can occur when concurrent transactions execute ^^without proper
 
 This problem occurs when two or more transactions read and update the same data item concurrently without being aware of each other's changes. As a result, the last update overwrites the previous ones, leading to the loss of some updates and causing data inconsistency.
 
-### 💡 Real-World Scenario:
+### Real-World Scenario:
 
 Two users (sessions) try to withdraw money from the same account at the same time:
 
@@ -109,6 +109,7 @@ COMMIT;
 ![Lost Update Example](images/lost update 3.png){ width="400" }
 
 Here, user B reads the balance (100) and calculates the new balance: 100 - 50 = 50, then  updates the record and commit. 
+
 ⚠️ ( Note:  to open two sessions in MySQL Workbench; Go to File → New Query Tab to open Session A, Repeat to open another tab (Session B). Each tab is a separate session — you can run SQL commands independently in each).
 
 #### 4) Back to session A:
@@ -130,10 +131,10 @@ SELECT * FROM accounts;
 
 
 #### Conclusion:
-•	Both transactions read the same initial value (100).
-•	Each transaction updates the data without being aware of the other's changes.
-•	The last transaction to commit determines the final value, possibly erasing the other's update.
-•	Even though no errors appear, data integrity is lost. This demonstrates the importance of proper concurrency control in database systems.
+-	Both transactions read the same initial value (100).
+-	Each transaction updates the data without being aware of the other's changes.
+-	The last transaction to commit determines the final value, possibly erasing the other's update.
+-	Even though no errors appear, data integrity is lost. This demonstrates the importance of proper concurrency control in database systems.
 
 
 
