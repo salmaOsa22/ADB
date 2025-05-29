@@ -44,7 +44,6 @@ Several problems can occur when concurrent transactions execute ^^without proper
 **Here is an illustrated problem with SQL transactions to simulate the problem:**
 
 #### 1. Lost update problem
-## Lost Update Problem
 
 This problem occurs when two or more transactions read and update the same data item concurrently without being aware of each other's changes. As a result, the last update overwrites the previous ones, leading to the loss of some updates and causing data inconsistency.
 
@@ -109,6 +108,7 @@ COMMIT;
 ![Lost Update Example](images/lost update 3.png){ width="400" }
 
 Here, user B reads the balance (100) and calculates the new balance: 100 - 50 = 50, then  updates the record and commit. 
+
 ⚠️ ( Note:  to open two sessions in MySQL Workbench; Go to File → New Query Tab to open Session A, Repeat to open another tab (Session B). Each tab is a separate session — you can run SQL commands independently in each).
 
 #### 4) Back to session A:
