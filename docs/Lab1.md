@@ -54,9 +54,7 @@ Two users (sessions) try to withdraw money from the same account at the same tim
 
 - **User A** reads the balance = 100, decides to withdraw 30 → wants to update it to 70.
 - **User B** also reads the balance = 100, decides to withdraw 50 → wants to update it to 50.
-- If both updates happen without proper control, one will overwrite the other.
-
-⚠️ This leads to lost updates and incorrect final balance.
+- If both updates happen without proper control, one will overwrite the other, leads to lost updates and incorrect final balance.
 
 ### Example of the Scenario in SQL:
 
