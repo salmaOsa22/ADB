@@ -16,7 +16,91 @@
 2. Explicit transactions: Each transaction is explicitly started with the `BEGIN TRANSACTION` statement and explicitly ended with a `COMMIT` or `ROLLBACK` statement **(which is concerned in this course)**.
 3. Implicit transactions: A new transaction is implicitly started when the prior transaction completes, but each transaction is explicitly completed with a `COMMIT` or `ROLLBACK` statement.
 
-### SQL statement for transaction control
+---
+
+###  Transaction Control Commands – `SAVEPOINT`, `ROLLBACK`, and `COMMIT`
+
+### 🎯 Objective
+
+Understand how to manage multi-step database transactions using SQL transaction control commands.
+
+---
+
+### ▶️ BEGIN
+
+Start a new transaction:
+
+```sql
+BEGIN;
+-- or
+START TRANSACTION;
+```
+
+---
+
+### 🔖 SAVEPOINT
+
+Set a point you can roll back to later:
+
+```sql
+BEGIN;
+
+INSERT INTO employees (id, name, department) VALUES (1, 'Alice', 'HR');
+SAVEPOINT sp1;
+
+INSERT INTO employees (id, name, department) VALUES (2, 'Bob', 'Finance');
+SAVEPOINT sp2;
+
+INSERT INTO employees (id, name, department) VALUES (3, 'Charlie', 'IT');
+```
+
+> ✅ At this point, we have added 3 employees and created two savepoints: `sp1` and `sp2`.
+
+---
+
+### 🔁 ROLLBACK
+
+Undo part or all of a transaction.
+
+#### 🔹 Rollback to a Savepoint
+
+```sql
+ROLLBACK TO sp2;
+```
+
+> This undoes only the insertion of **Charlie**, keeping **Alice** and **Bob**.
+
+#### 🔸 Rollback Entire Transaction
+
+```sql
+ROLLBACK;
+```
+
+> This undoes **all** changes made in the transaction.
+
+---
+
+### 💾 COMMIT
+
+Make all changes permanent:
+
+```sql
+COMMIT;
+```
+
+> After committing, the changes cannot be undone.
+
+---
+
+### 📌 Summary
+
+* Use `SAVEPOINT` to mark logical checkpoints.
+* Use `ROLLBACK` to undo mistakes.
+* Use `COMMIT` to make sure the database saves your work.
+
+This gives you control and safety when working with important or complex data operations.
+
+---
 
 ### Transaction properties and how SQL supports them
 
@@ -215,6 +299,84 @@ In an online electronics store:
 7. Conclusion: Session 2 was able to see the updated quantity (0 laptops) before Session 1 rolled back. This leads to inconsistent or misleading data, which is why isolation levels like `READ COMMITTED or REPEATABLE READ are important in real-world applications.
 
 #### 3. The Incorrect Summary Problem
+
+### 🧠 Problem Statement
+
+When you use aggregate functions like `SUM`, `AVG`, and `COUNT` on a table while other transactions are modifying the data, the result may be **inconsistent**. This is because some rows might be updated **before** the function reads them, and others **after**.
+
+---
+
+### 🛠️ Step 1: Create the Table
+
+```sql
+CREATE TABLE accounts (
+    id INT PRIMARY KEY,
+    balance DECIMAL(10,2)
+);
+```
+
+---
+
+### 📥 Step 2: Insert Initial Data
+
+```sql
+INSERT INTO accounts (id, balance) VALUES
+(1, 500.00),
+(2, 750.00),
+(3, 1200.00);
+```
+
+---
+
+### 🔄 Step 3: Simulate Concurrent Transactions
+
+####  Transaction T1 (Session 1)
+
+```sql
+BEGIN;
+UPDATE accounts SET balance = balance + 100 WHERE id = 1;
+-- not committed
+```
+#### Transaction T2 (Session 2)
+
+```sql
+SELECT SUM(balance) FROM accounts;
+```
+At this point, SUM() still uses the old value for id = 1 because the update in Session 1 (T1) hasn’t been committed.
+
+SUM(balance) = 2450.00
+
+---
+
+### 💾 Step 4: Add COMMIT to T1 and Re-run
+
+#### Transaction T1 (Session 1)
+
+
+```sql
+BEGIN;
+UPDATE accounts SET balance = balance + 100 WHERE id = 1;
+COMMIT;
+```
+
+ #### Transaction T2 (Session 2)
+
+```sql
+SELECT SUM(balance) FROM accounts;
+```
+Now, SUM() uses the new value for id = 1 because the update in T1 has been committed.
+
+SUM(balance) = 2550.00
+
+📌 Summary
+
+If T1 is not committed, T2 sees old values.
+
+If T1 is committed, T2 sees updated values.
+
+Proper transaction management ensures consistent query results.
+
+---
 
 ## Assignment: Simulate The Unrepeatable Read Problem
 !!! attention "Due Date on 14/6/2025"
